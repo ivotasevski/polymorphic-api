@@ -1,0 +1,10 @@
+package com.ivotasevski.polymorphic_api.runtime.converter.client2;
+
+import com.ivotasevski.polymorphic_api.api.dto.client2.Client2RequestMetadata;
+import com.ivotasevski.polymorphic_api.runtime.entity.dto.client2.Client2Metadata;
+import org.mapstruct.Mapper;
+
+@Mapper(componentModel = "spring")
+public interface Client2RequestMetadataConverter {
+    Client2Metadata convertToEntityMetadata(Client2RequestMetadata source);
+}

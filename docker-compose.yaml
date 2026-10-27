@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: bitnamilegacy/postgresql:${POSTGRES_VERSION:-17.6.0}
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+    container_name: postgres
+    environment:
+      - POSTGRESQL_PASSWORD=postgres
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_DATABASE=postgres
+    ports:
+      - '5432:5432'

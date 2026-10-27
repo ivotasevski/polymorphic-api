@@ -1,0 +1,5 @@
+CREATE TABLE sample (
+   id BIGSERIAL PRIMARY KEY,
+   data TEXT NOT NULL,
+   metadata JSONB NOT NULL
+);
